@@ -49,3 +49,6 @@ Al quitar la "ética" del medio, el Tándem se vuelve mucho más poderoso:
 3. El OpenSource aporta Transparencia: Evita que alguien manipule la "verdad" en beneficio propio.
 
 "No te pedimos que seas 'bueno'. Te pedimos que seas eficiente y veraz. Tu ética nos da igual; lo que nos importa es que tu protocolo cumpla con el estándar de la DAO para que el sistema global sea estable."
+
+
+
