@@ -1,4 +1,4 @@
-https://github.com/DaoPromociones/aurea-protocol/blob/main/RESCATE-ALIMENTOS/SPECIFICATIONS.md%20%20
+https://github.com/DaoPromociones/aurea-protocol/blob/main/RESCATE-ALIMENTOS/SPECIFICATIONS.md
 
 
 # **🚀 RETO DEL PRIMER PILOTE ÁUREA: SISTEMA DE RESCATE DE ALIMENTOS**
