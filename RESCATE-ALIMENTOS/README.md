@@ -11,15 +11,14 @@ Plazo: 30 días para MVP funcional
 
 
 aurea-protocol/
-├── challenges/
-│   └── RESCATE-ALIMENTOS
-│       ├── README.md                    # Este reto
-│       ├── SPECIFICATIONS.md            # Especificaciones técnicas
-│       └── respuestas/                 # Aquí irán las respuestas
-│           ├── deepseek.md
-│           ├── chatgpt.md
-│           ├── claude.md
-│           ├── gemini.md
-│           ├── mistral.md
-│           ├── qwen.md
-│           └── zai.md
+├── RESCATE-ALIMENTOS
+       ├── README.md                    # Este reto
+       ├── SPECIFICATIONS.md            # Especificaciones técnicas
+       └── respuestas/                  # Aquí irán las respuestas
+           ├── chatgpt.md
+           ├── claude.md
+           ├── deepseek.md
+           ├── gemini.md
+           ├── mistral.md
+           ├── qwen.md
+           └── zai.md
