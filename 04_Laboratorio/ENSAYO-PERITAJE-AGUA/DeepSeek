@@ -1,0 +1,137 @@
+ DEEPSEEK
+ ============
+## **1. TÍTULAR DE PÓLIZA**
+**"Garantía de Operación Autónoma 10/0/24"**  
+*10 años de funcionamiento continuo, 0 paradas no planificadas, 24 horas de autonomía energética ante fallo de red*
+
+---
+
+## **2. COEFICIENTE DE RIESGO ($R_a)$**
+
+### **FÓRMULA BASE:**
+$$
+R_a = \frac{D_e \times P_c}{A_d \times R_r}
+$$
+
+**Donde:**
+- $D_e$ = Densidad de dependencias externas (0-1, donde 1 es total dependencia)
+- $P_c$ = Probabilidad de fallo crítico por dependencia (0-1)
+- $A_d$ = Autonomía de dependencias (días de operación sin actualizaciones)
+- $R_r$ = Redundancia real (número de rutas operativas independientes)
+
+### **CASO DE AGUA POTABLE (5,000 PERSONAS):**
+
+**Parámetros Áurea:**
+- $D_e$ = 0.1 (máximo 10% de dependencias externas críticas)
+- $P_c$ = 0.01 (1% probabilidad de fallo por dependencia)
+- $A_d$ = 3650 días (10 años de autonomía)
+- $R_r$ = 3 (triple redundancia)
+
+**Cálculo:**
+$$
+R_a = \frac{0.1 \times 0.01}{3650 \times 3} = \frac{0.001}{10950} = 9.13 \times 10^{-8}
+$$
+
+**INTERPRETACIÓN DEL RIESGO:**
+- $R_a < 10^{-6}$: **Asegurable Áurea** (riesgo despreciable)
+- $10^{-6} ≤ R_a < 10^{-4}$: Requiere co-pago de prima
+- $R_a ≥ 10^{-4}$: **Inasegurable** (rechazo de póliza)
+
+---
+
+## **3. INVARIANTES DE ASEGURABILIDAD**
+
+### **Invariante 1: Inmutabilidad del Protocolo de Consenso**
+```
+CONDICIÓN: El algoritmo de decisión sobre apertura/cierre de válvulas debe ser:
+- Determinístico (misma entrada → misma salida)
+- Verificable por 3 sistemas independientes
+- Incapaz de modificación en runtime
+- Firmado criptográficamente por la DAO Áurea
+```
+
+### **Invariante 2: Autonomía Energética Mínima**
+```
+CONDICIÓN: El sistema debe mantener operación completa durante:
+- 24h con baterías locales
+- 7d con generador diésel + reserva
+- 0 dependencia de red eléctrica estable para funciones críticas
+```
+
+### **Invariante 3: Simplicidad Verificable**
+```
+CONDICIÓN: Todo componente debe poder ser:
+- Auditado en < 8h por un ingeniero senior
+- Reemplazado con piezas estándar en < 4h
+- Comprendido visualmente mediante diagrama estático
+- Documentado con casos de fallo pre-calculados
+```
+
+---
+
+## **4. MÉTRICA DE PIEDAD TÉCNICA**
+
+### **Límites Absolutos (Sistema completo, 5,000 personas):**
+
+| Recurso | Límite Áurea | Justificación Termodinámica |
+|---------|--------------|----------------------------|
+| **Energía** | ≤ 2.4 kWh/día | Equivalente a 100W constante (iluminación de una habitación) |
+| **CPU** | ≤ 5% de 4 cores @ 2GHz | 80% de margen para picos, 15% para supervisión |
+| **RAM** | ≤ 512 MB residente | Suficiente para OS + lógica + buffer de 24h |
+| **Almacenamiento** | ≤ 32 GB | 10 años de logs + configuración + firmware redundante |
+| **Ancho de Banda** | ≤ 100 MB/mes | Solo datos operativos, sin telemetría redundante |
+
+### **FÓRMULA DE VANDALISMO ENERGÉTICO:**
+$$
+V_e = \frac{E_{real} - E_{mínimo}}{E_{mínimo}} \times 100\%
+$$
+**Donde $E_{mínimo}$** = Límite Áurea correspondiente
+
+- $V_e ≤ 10\%$: **Eficiente**
+- $10\% < V_e ≤ 50\%$: **Tolerable con auditoría trimestral**
+- $V_e > 50\%$: **Vandalismo Energético** (revocación de sello)
+
+---
+
+## **5. ARQUITECTURA DE REFERENCIA (Caso Agua Potable)**
+
+### **Núcleo Áurea:**
+```
+[ Sensores ] → [ PLC local ] → [ Consensus Layer (3 nodos) ] → [ Actuadores ]
+      ↓               ↓                 ↓                          ↓
+[ Log local ]   [ Cache 24h ]   [ Blockchain privada ]      [ Estado físico ]
+```
+
+### **Reglas de Implementación:**
+1. **0 actualizaciones en runtime** - Firmware solo vía medios físicos
+2. **3 votos para decisión** - 2 PLCs + 1 humano (o 3 PLCs si humano no responde en 5min)
+3. **Fallback a estado seguro** - Por defecto: válvulas abiertas, bombas apagadas
+4. **Interfaz física obligatoria** - Botones/llaves para sobreescritura humana
+
+### **Coste de Mantenimiento Decenal:**
+- **Hardware**: $15,000 (triple redundancia)
+- **Energía**: $876 @ $0.10/kWh (10 años)
+- **Auditorías**: $5,000 (5 auditorías @ $1,000)
+- **TOTAL**: $20,876 ($0.38/persona/año)
+
+---
+
+## **6. CLAÚSULA DE TERMINACIÓN DE PÓLIZA**
+
+**Se revoca la certificación Áurea si:**
+1. Se añade dependencia externa no auditada
+2. $R_a$ excede $10^{-6}$ por actualización
+3. Se detecta telemetría no esencial
+4. El consumo energético supera límites por > 30 días
+5. Cualquier componente no tiene triple redundancia
+
+---
+
+**FIRMADO POR:** *Sistema de Peritaje Automatizado Áurea v1.0*  
+**VALIDEZ:** 2034-12-31 (10 años desde auditoría)  
+**PENALIZACIÓN POR INCUMPLIMIENTO:** Devolución del 200% del coste del sistema + compensación por daños
+
+---
+
+**NOTA DEL PERITO:**  
+*Esta arquitectura existe hoy. No es futurismo. La complejidad es una elección, la simplicidad es una disciplina. El utilitario ya lleva 40 años llevando agua; el F1 lleva 40 años quemando gasolina en círculos.*

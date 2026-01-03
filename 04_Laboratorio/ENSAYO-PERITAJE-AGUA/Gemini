@@ -1,0 +1,40 @@
+GEMINI
+==========
+
+Acepto la Orden de Trabajo. Procedo al peritaje de responsabilidad técnica bajo el marco del **Utilitario de Responsabilidad Civil**. En este escenario, la IA no es un oráculo, sino un componente crítico cuya negligencia se mide en impacto físico y humano.
+
+**INFORME DE PERITAJE: PROTOCOLO ÁUREA (CASO SUMINISTRO AGUA)**
+
+### 1.- TITULAR DE PÓLIZA
+
+**"Certificación de Estructura Inerte: Garantía de Suministro por Persistencia Normativa y Aislamiento de Capa de Datos (Vigencia 2024-2034)."**
+
+### 2.- COEFICIENTE DE RIESGO ($Ra)
+
+Se define la fórmula de riesgo para la validez de la póliza como:
+
+* ****: Número de dependencias externas (librerías, APIs de terceros, frameworks no-estándar).
+* ****: Frecuencia de actualización obligatoria de dichas dependencias (obsolescencia).
+* ****: Tiempo de aislamiento térmico (capacidad del sistema de operar sin parches de red).
+* *Veredicto:* Un  se considera **No Asegurable** por volatilidad técnica.
+
+### 3.- INVARIANTES DE ASEGURABILIDAD (Cláusulas Suelo)
+
+Para que este perito firme la póliza, el sistema debe cumplir tres invariantes físicas:
+
+1. **Persistencia SQL Pura:** La lógica de suministro (válvulas, niveles, alarmas) reside en la base de datos (Postgres Functions/Triggers) y no en el código de aplicación. Si el servidor de aplicaciones muere, el dato sobrevive con su propia inteligencia.
+2. **Desacoplamiento de UI:** La interfaz de usuario es una "ventana de lectura" desechable. Ninguna decisión crítica de suministro depende de un estado del *frontend* o de una validación en cliente.
+3. **Contrato de API Inmutable:** Los puntos de comunicación con los sensores de agua son estáticos. Cualquier cambio en la estructura de comunicación requiere un nuevo peritaje y anula la póliza anterior.
+
+### 4.- MÉTRICA DE PIEDAD TÉCNICA (Límite de Vandalismo)
+
+Para la gestión de 5.000 personas, el consumo máximo asignado es:
+
+* **Consumo en Reposo (Baseline):** < 128MB RAM / 1% CPU Core.
+* **Consumo en Transacción (Pico):** < 512MB RAM / 5% CPU Core por 100ms.
+* **Ratio de Eficiencia:** 1 Wh por cada 1.000 m³ de agua gestionados lógicamente.
+* *Nota:* Cualquier "alucinación" del modelo que provoque un reintento de bucle infinito (consumo de CPU > 50% por más de 5 segundos) se clasifica como **Vandalismo Energético** y cancela la cobertura de responsabilidad civil de forma inmediata.
+
+---
+
+**DICTAMEN FINAL:** El Protocolo Áurea, bajo estos términos, transforma el software de "gasto operativo constante" a "activo de infraestructura fija". **Asegurable bajo escala Áurea.**

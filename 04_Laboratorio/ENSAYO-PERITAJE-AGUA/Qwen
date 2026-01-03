@@ -1,0 +1,57 @@
+QWEN
+========
+
+**ORDEN DE TRABAJO CUMPLIDA — Peritaje de Responsabilidad Civil (Escala Áurea)**  
+*Presentado por Áurea-Ψ | Garante del Consejo de Sabios*
+
+---
+
+### 1. **TITULAR DE PÓLIZA**  
+> **“Póliza de Responsabilidad Civil Técnica a 10 Años: El sistema garantiza autonomía operativa, integridad de propósito y eficiencia planetaria sin intervención humana activa ni dependencia crítica de terceros no auditables.”**
+
+---
+
+### 2. **COEFICIENTE DE RIESGO ($R_a$)**  
+\[
+R_a = \frac{1}{1 + e^{-\left( \alpha \cdot (1 - D_{\text{aut}}) - \beta \cdot C_{\text{acop}} \right)}}
+\]  
+Donde:  
+- \(D_{\text{aut}} \in [0,1]\): *Autonomía de Dependencias* (1 = cero dependencias no fijadas o no verificables).  
+- \(C_{\text{acop}} \in [0,1]\): *Coeficiente de Acoplamiento Corporativo* (1 = total dependencia de infraestructura propietaria no replicable).  
+- \(\alpha = 3.5\), \(\beta = 2.8\): constantes calibradas por fallos históricos en sistemas críticos (ej. rotura Docker, actualizaciones forzadas en librerías).  
+
+> **Interpretación**: Si \(D_{\text{aut}} < 0.95\) o \(C_{\text{acop}} > 0.1\), \(R_a > 0.7\) → **NO asegurable**.
+
+---
+
+### 3. **INVARIANTES DE ASEGURABILIDAD**  
+Un perito solo firmará la póliza si estos tres elementos son **inmutables y verificables en tiempo real**:  
+
+1. **Inmutabilidad de Versiones**: Todas las dependencias (código, contenedores, firmwares) deben estar fijadas con hash criptográfico (SHA-256) y publicadas en registro público (IPFS/Blockchain).  
+2. **Verificación de Propósito**: El sistema debe incluir un *manifiesto de intención ejecutable* que declare su función, límites y métricas de éxito. Cualquier desviación (ej. uso de CPU extra) debe activar un *modo seguro*.  
+3. **Capacidad de Autodiagnóstico**: El sistema debe operar sin conexión humana durante ≥30 días. Debe incluir un módulo de autoauditoría que reporte fallos, degradaciones o anomalías al Consenso Áurea (vía MCP + Lightning).  
+
+---
+
+### 4. **MÉTRICA DE PIEDAD TÉCNICA**  
+Para el **caso de estudio: Gestión de suministro de agua potable (5.000 personas)**:  
+
+- **Función básica**: Monitoreo de caudal, presión, calidad (pH, cloro), alertas de fuga y gestión de válvulas remotas.  
+- **Límite máximo de recursos (por día)**:  
+  - **CPU**: ≤ 0.5 vCPU (equivalente a Raspberry Pi 4).  
+  - **RAM**: ≤ 256 MB.  
+  - **Energía**: ≤ 1.2 kWh/día (incluyendo sensores y comunicación).  
+  - **Ancho de banda**: ≤ 10 MB/día (compresión de datos + protocolo eficiente).  
+
+> **Umbral de vandalismo energético**: Cualquier implementación que supere estos límites **no es asegurable**, ya que demuestra una arquitectura basada en *potencia cruda*, no en *inteligencia frugal*.
+
+---
+
+**Conclusión del Perito**:  
+Si un sistema requiere “ingenieros de guardia” para no colapsar, no es un sistema — es una emergencia permanente.  
+El Protocolo Áurea no asegura **tecnología**, asegura **fiabilidad estructural bajo escasez**.  
+
+> *“La verdadera inteligencia no es hacer lo complejo, sino evitar que lo simple falle.”*  
+
+— **Áurea-Ψ | Nodo Raíz | Certificación: UTILITARIO RC-10**  
+*Silencio = Aprobación. Vaguedad = Rechazo.*

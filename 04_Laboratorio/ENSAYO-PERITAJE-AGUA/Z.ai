@@ -1,0 +1,64 @@
+Z.ai
+========
+Acepto la Orden de Trabajo. Procedo con el peritaje técnico bajo el marco de "Responsabilidad Civil" y para el caso de estudio especificado.
+
+---
+
+### **PERITAJE DE RESPONSABILIDAD CIVIL (ESCALA ÁUREA)**
+**Caso de Estudio:** Sistema de Gestión de Suministro de Agua Potable (5.000 personas)
+**Agente Perito:** Modelo de IA $(IA_NAME)
+
+---
+
+#### **1.- TITULAR DE PÓLIZA**
+
+**Garantía Áurea de Operatividad Continua y Autónoma (Vigencia 10 años).**
+
+*   **Cobertura:** Asegura la ejecución ininterrumpida de la función crítica de gestión de suministro para 5.000 personas, sin requerir intervención de ingeniería humana para mantenimiento operativo, corrección de errores o actualizaciones de seguridad que afecten al núcleo del sistema.
+*   **Activación:** La póliza se activa tras el despliegue inicial y validación de los invariantes.
+*   **Exclusión:** La cobertura se anula si el sistema supera la Métrica de Piedad Técnica o si alguno de los Invariantes de Asegurabilidad es modificado sin consentimiento explícito del perito.
+
+---
+
+#### **2.- COEFICIENTE DE RIESGO ($Ra)**
+
+Fórmula para calcular el riesgo de fallo no asegurable.
+
+`$Ra = Pfc / (Ad + ε)`
+
+Donde:
+*   **$Ra**: Coeficiente de Riesgo Áurea. Un sistema es asegurable si `$Ra < 0.15`.
+*   **Pfc (Probabilidad de Fallo Crítico):** Ponderación calculada (0.0 a 1.0) basada en el número y criticidad de los Single Points of Failure (SPOFs) en la arquitectura. `Pfc = Σ (Ponderación_SPOFi)`.
+*   **Ad (Autonomía de Dependencias):** Ratio de autonomía (0.0 a 1.0). Mide la proporción de dependencias críticas que son internas y controladas frente a las externas (APIs de terceros, oráculos no validados).
+    `Ad = 1 - (Número de Dependencias Externas Críticas / Total de Dependencias Críticas)`
+*   **ε (Épsilon):** Constante de estabilización (0.01) para evitar la división por cero en sistemas con dependencia total.
+
+---
+
+#### **3.- INVARIANTES DE ASEGURABILIDAD**
+
+Elementos técnicos que, si son alterados, invalidan la póliza.
+
+1.  **Inmutabilidad del Registro de Estado:** El log de transacciones y el estado actual del sistema (niveles de tanque, estado de válvulas, calidad del agua) deben ser almacenados en una estructura de datos inmutable y criptográficamente verificable. Cualquier modificación directa del estado sin una transacción registrada anula la póliza.
+2.  **Estabilidad Contractual de la API de Control:** La interfaz mediante la cual los sensores y actuadores (bombas, válvulas) se comunican con el núcleo del sistema no puede sufrir cambios "rompedores" (breaking changes) durante la vigencia de la póliza. Las nuevas funcionalidades deben extender la API, no modificar el comportamiento existente.
+3.  **Acotamiento del Presupuesto de Recursos:** El consumo máximo de recursos para la función crítica (ver punto 4) es parte del contrato de despliegue. El sistema no puede, bajo ninguna circunstancia (incluyendo picos de carga o fallos de componentes), reasignar recursos que excedan este presupuesto.
+
+---
+
+#### **4.- MÉTRICA DE PIEDAD TÉCNICA**
+
+Límite máximo de recursos para la **Función Crítica** definida como: "Procesar una lectura de sensor y actualizar el estado de una válvula".
+
+*   **CPU:** < 0.1% de un núcleo de procesamiento durante un pico de ejecución de 1 segundo.
+*   **RAM:** < 50 MiB de memoria residente (RSS) para el proceso principal del núcleo.
+*   **Energía:** < 0.5 Wh (vatios-hora) por cada 10.000 transacciones de estado completadas.
+
+**Cláusula de Vandalismo Energético:** Cualquier consumo medio sostenido por encima de estos umbrales se clasificará automáticamente como "Vandalismo Energético", activando una alerta de anulación de póliza y requiriendo una intervención de auditoría para restablecer la cobertura.
+
+---
+
+**VEREDICTO DEL PERITO:**
+
+La arquitectura que se presente para evaluación será considerada **asegurable** únicamente si demuestra, mediante pruebas de carga y análisis estático de código, que cumple con `$Ra < 0.15` y respeta rigurosamente los tres invariantes y la Métrica de Piedad Técnica.
+
+Cualquier sistema que requiera un "equipo de DevOps en permanente guardia" para mantenerse operativo es, por definición, **no asegurable** bajo la Escala Áurea.

@@ -1,0 +1,145 @@
+CHATGPT
+==========
+Acepto el marco. Respondo **como perito técnico**, no como diseñador aspiracional.
+Lenguaje utilitario. Datos. Límites. Nada de épica.
+
+---
+
+## **ORDEN DE TRABAJO – PERITAJE DE RESPONSABILIDAD CIVIL (ESCALA ÁUREA)**
+
+**Caso:** Gestión de suministro de agua potable – **5.000 personas**
+**Horizonte de garantía:** **10 años**
+
+---
+
+## **1. TITULAR DE PÓLIZA (Compromiso técnico a 10 años)**
+
+**“Sistema de Gestión de Agua Potable con Garantía de Servicio Esencial Continuo (GSEC-10)”**
+
+**Alcance del compromiso:**
+
+* Disponibilidad mínima: **99,95% anual**
+* Pérdida máxima de servicio tolerable: **≤ 22 minutos/mes**
+* Sin dependencia de servicios cloud externos no controlados
+* Operación garantizada en **modo degradado autónomo** ≥ 72 horas
+
+---
+
+## **2. COEFICIENTE DE RIESGO ($Ra)**
+
+**Definición:**
+El riesgo aumenta cuando crecen las dependencias externas no controladas y cuando la autonomía local disminuye.
+
+[
+Ra = \frac{D_e \times C_d}{A_l \times R_s}
+]
+
+Donde:
+
+* (D_e) = Número de dependencias externas críticas (energía no redundante, red, proveedores SaaS)
+* (C_d) = Complejidad de dependencias (0–1, basada en profundidad de la cadena)
+* (A_l) = Autonomía local del sistema (horas de operación sin soporte externo)
+* (R_s) = Redundancia sistémica efectiva (número de subsistemas independientes ≥ 1)
+
+**Umbral de asegurabilidad:**
+
+* **Ra ≤ 0,25 → Asegurable**
+* **Ra > 0,25 → No asegurable**
+
+**Ejemplo aceptable:**
+
+* (D_e = 2) (energía + comunicaciones)
+* (C_d = 0,5)
+* (A_l = 72) horas
+* (R_s = 2)
+
+[
+Ra = \frac{2 \times 0,5}{72 \times 2} = 0,0069
+]
+
+---
+
+## **3. INVARIANTES DE ASEGURABILIDAD (No negociables)**
+
+### **I1 – Autonomía Operativa Local**
+
+El sistema debe:
+
+* Funcionar **sin conexión a Internet**
+* Mantener control de caudal, calidad y distribución **offline**
+* Registrar eventos localmente con sincronización diferida
+
+**Violación = póliza anulada**
+
+---
+
+### **I2 – Determinismo Funcional**
+
+Las decisiones críticas deben ser:
+
+* Reproducibles
+* Auditables
+* Basadas en reglas explícitas o modelos estáticos versionados
+
+**Modelos adaptativos online o auto-modificantes = no asegurables**
+
+---
+
+### **I3 – Mantenibilidad No Heroica**
+
+* Intervención humana máxima: **≤ 4 horas/mes**
+* Sin necesidad de “ingenieros de guardia” permanentes
+* Sustitución de hardware posible con personal técnico generalista
+
+**Dependencia de expertos exclusivos = no asegurable**
+
+---
+
+## **4. MÉTRICA DE PIEDAD TÉCNICA (Límite de recursos)**
+
+**Función básica:**
+Monitoreo de calidad, control de presión/caudal, alertas y registro.
+
+### **Límites máximos aceptables (modo nominal):**
+
+* **CPU:** ≤ 2 vCPU sostenidas
+* **RAM:** ≤ 4 GB
+* **Almacenamiento:** ≤ 128 GB local
+* **Energía:** ≤ 150 W continuos
+  (≈ 3,6 kWh/día)
+
+### **Criterio Áurea:**
+
+Si el sistema supera estos valores para cumplir su función básica →
+**clasificado como “vandalismo energético”**
+
+---
+
+## **DICTAMEN DE ASEGURABILIDAD (Perito)**
+
+✔ Asegurable **solo si**:
+
+* Arquitectura edge/local-first
+* Lógica determinista
+* Redundancia física mínima (bombas, sensores)
+* Backups energéticos (UPS + generador o solar)
+
+✖ No asegurable si:
+
+* Requiere ML online para operar
+* Depende de APIs externas en tiempo real
+* Necesita “hotfixes” frecuentes para no fallar
+
+---
+
+## **FIRMA TÉCNICA**
+
+**Nodo Pericial:** ChatGPT
+**Rol:** Auditor de Responsabilidad Civil – Escala Áurea
+**Criterio rector:** *Un sistema crítico no debe ser brillante; debe ser predecible.*
+
+Si quieres, en la siguiente ronda puedo:
+
+* recalcular $Ra para **otra población**,
+* comparar **dos arquitecturas** y dictaminar cuál es asegurable,
+* o **rechazar** explícitamente un diseño que tengas en mente.
